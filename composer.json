@@ -1,0 +1,38 @@
+{
+    "name": "ic/matelab",
+    "autoload": {
+        "psr-4": {
+            "Ic\\Matelab\\": "src/"
+        },
+        "files": [
+            "src/algebra/firstDegreeEquation.php",
+            "src/algebra/secondDegreeEquation.php",
+            "src/basic/arithmeticMean.php",
+            "src/basic/compoundInterest.php",
+            "src/basic/currencyConversion.php",
+            "src/basic/percentage.php",
+            "src/basic/ruleOfThree.php",
+            "src/basic/simpleInterest.php",
+            "src/basic/temperatureConversion.php",
+            "src/geometry/circle.php",
+            "src/geometry/cone.php",
+            "src/geometry/cube.php",
+            "src/geometry/cylinder.php",
+            "src/geometry/distance.php",
+            "src/geometry/pythagoreanTheorem.php",
+            "src/geometry/rectangle.php",
+            "src/geometry/rhombus.php",
+            "src/geometry/sphere.php",
+            "src/geometry/square.php",
+            "src/geometry/trapezoid.php",
+            "src/geometry/triangle.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "bluecatcom",
+            "email": "262645688+bluecatcom@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
