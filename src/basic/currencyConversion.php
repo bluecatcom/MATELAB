@@ -1,7 +1,5 @@
 <?php
 
-namespace MATELAB\basic;
-
 function currencyConversion($value, $currency)
 {
     $cotation = [
