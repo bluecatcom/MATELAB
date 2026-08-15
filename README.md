@@ -1,135 +1,135 @@
 # MateLab
 
-Biblioteca PHP com funções matemáticas para cálculos básicos, geometria, física financeira e equações.
+A PHP library with mathematical functions for basic calculations, geometry, financial math, and equations.
 
 Namespace: `MATELAB\basic`
 
-## Índice
+## Table of Contents
 
-- [Matemática Básica](#matemática-básica)
-- [Geometria](#geometria)
-- [Equações](#equações)
-- [Uso](#uso)
+- [Basic Math](#basic-math)
+- [Geometry](#geometry)
+- [Equations](#equations)
+- [Usage](#usage)
 
 ---
 
-## Matemática Básica
+## Basic Math
 
 ### `arithmeticMean($res)`
-Calcula a média aritmética de uma lista de números.
+Calculates the arithmetic mean of a list of numbers.
 
-- **`$res`** *(string)* — Números separados por vírgula (ex: `"10,20,30"`).
-- **Retorno** *(float)* — Média aritmética.
+- **`$res`** *(string)* — Numbers separated by commas (e.g., `"10,20,30"`).
+- **Returns** *(float)* — Arithmetic mean.
 
 ### `percentage($number, $percentage)`
-Calcula a porcentagem de um número.
+Calculates a percentage of a number.
 
-- **`$number`** *(float)* — Valor base.
-- **`$percentage`** *(float)* — Percentual a ser calculado.
-- **Retorno** *(float)* — Resultado do percentual sobre o número.
+- **`$number`** *(float)* — Base value.
+- **`$percentage`** *(float)* — Percentage to calculate.
+- **Returns** *(float)* — Result of the percentage applied to the number.
 
 ### `ruleOfThree($a, $b, $c, $d)`
-Resolve regra de três simples, identificando automaticamente qual dos quatro valores é a incógnita (`"x"` ou `"X"`).
+Solves a simple rule of three, automatically identifying which of the four values is the unknown (`"x"` or `"X"`).
 
-- **`$a`, `$b`, `$c`, `$d`** — Três valores numéricos e um deles como `"x"`.
-- **Retorno** *(float)* — Valor da incógnita.
+- **`$a`, `$b`, `$c`, `$d`** — Three numeric values and one of them set as `"x"`.
+- **Returns** *(float)* — Value of the unknown.
 
 ### `simpleInterest($c, $i, $t)`
-Calcula juros simples.
+Calculates simple interest.
 
-- **`$c`** *(float)* — Capital.
-- **`$i`** *(float)* — Taxa de juros.
-- **`$t`** *(float)* — Tempo.
-- **Retorno** *(float)* — Valor dos juros.
+- **`$c`** *(float)* — Principal.
+- **`$i`** *(float)* — Interest rate.
+- **`$t`** *(float)* — Time.
+- **Returns** *(float)* — Interest amount.
 
 ### `compoundInterest($c, $i, $t)`
-Calcula juros compostos.
+Calculates compound interest.
 
-- **`$c`** *(float)* — Capital.
-- **`$i`** *(float)* — Taxa de juros.
-- **`$t`** *(float)* — Tempo.
-- **Retorno** *(float)* — Montante final.
+- **`$c`** *(float)* — Principal.
+- **`$i`** *(float)* — Interest rate.
+- **`$t`** *(float)* — Time.
+- **Returns** *(float)* — Final amount.
 
 ### `currencyConversion($value, $currency)`
-Converte um valor para a cotação da moeda informada.
+Converts a value using the exchange rate of the given currency.
 
-- **`$value`** *(float)* — Valor a ser convertido.
-- **`$currency`** *(string)* — Código da moeda (`"USD"`, `"EUR"`, `"BRL"`, etc.).
-- **Retorno** *(float|null)* — Valor convertido, ou `null` se a moeda não for suportada.
+- **`$value`** *(float)* — Value to convert.
+- **`$currency`** *(string)* — Currency code (`"USD"`, `"EUR"`, `"BRL"`, etc.).
+- **Returns** *(float|null)* — Converted value, or `null` if the currency is not supported.
 
-Moedas suportadas: USD, EUR, GBP, JPY, CNY, BRL, CAD, AUD, CHF, INR, KRW, MXN, ARS.
+Supported currencies: USD, EUR, GBP, JPY, CNY, BRL, CAD, AUD, CHF, INR, KRW, MXN, ARS.
 
 ### `temperatureConversion($value, $temperature1, $temperature2)`
-Converte temperatura entre Celsius, Fahrenheit e Kelvin.
+Converts temperature between Celsius, Fahrenheit, and Kelvin.
 
-- **`$value`** *(float)* — Valor da temperatura.
-- **`$temperature1`** *(string)* — Unidade de origem (`"C"`, `"F"` ou `"K"`).
-- **`$temperature2`** *(string)* — Unidade de destino (`"C"`, `"F"` ou `"K"`).
-- **Retorno** *(float|null)* — Valor convertido, ou `null` se as unidades forem inválidas.
+- **`$value`** *(float)* — Temperature value.
+- **`$temperature1`** *(string)* — Source unit (`"C"`, `"F"`, or `"K"`).
+- **`$temperature2`** *(string)* — Target unit (`"C"`, `"F"`, or `"K"`).
+- **Returns** *(float|null)* — Converted value, or `null` if the units are invalid.
 
 ---
 
-## Geometria
+## Geometry
 
-### Círculo
-- **`circler($r, $ap)`** — Área (`"A"`) ou perímetro (`"P"`) a partir do raio.
-- **`circled($d, $rp)`** — Raio (`"R"`) ou perímetro (`"P"`) a partir do diâmetro.
+### Circle
+- **`circler($r, $ap)`** — Area (`"A"`) or perimeter (`"P"`) from the radius.
+- **`circled($d, $rp)`** — Radius (`"R"`) or perimeter (`"P"`) from the diameter.
 
 ### Cone
-- **`conerh($r, $h, $vg)`** — Volume (`"V"`) a partir de raio e altura, ou geratriz (`"G"`).
-- **`conerg($r, $g)`** — Área lateral a partir de raio e geratriz.
+- **`conerh($r, $h, $vg)`** — Volume (`"V"`) from radius and height, or slant height (`"G"`).
+- **`conerg($r, $g)`** — Lateral surface area from radius and slant height.
 
-### Cubo
-- **`cube($l, $vas)`** — Volume (`"V"`), área (`"A"`) ou soma das arestas (`"S"`) a partir do lado.
+### Cube
+- **`cube($l, $vas)`** — Volume (`"V"`), surface area (`"A"`), or sum of edges (`"S"`) from the side length.
 
-### Cilindro
-- **`cylinder($r, $h, $va)`** — Volume (`"V"`) ou área (`"A"`) a partir de raio e altura.
+### Cylinder
+- **`cylinder($r, $h, $va)`** — Volume (`"V"`) or surface area (`"A"`) from radius and height.
 
-### Distância e Pitágoras
-- **`distance($xb, $xa, $yb, $ya)`** — Distância entre dois pontos `(xa, ya)` e `(xb, yb)`.
-- **`pythagorean($a, $b)`** — Hipotenusa a partir dos catetos `a` e `b`.
+### Distance and Pythagoras
+- **`distance($xb, $xa, $yb, $ya)`** — Distance between two points `(xa, ya)` and `(xb, yb)`.
+- **`pythagorean($a, $b)`** — Hypotenuse from legs `a` and `b`.
 
-### Retângulo
-- **`rectangle($c, $l, $ap)`** — Área (`"A"`) ou perímetro (`"P"`) a partir de comprimento e largura.
+### Rectangle
+- **`rectangle($c, $l, $ap)`** — Area (`"A"`) or perimeter (`"P"`) from length and width.
 
-### Losango
-- **`rhombusd($D, $d)`** — Área a partir das diagonais maior (`D`) e menor (`d`).
-- **`rhombusl($l)`** — Perímetro a partir do lado.
+### Rhombus
+- **`rhombusd($D, $d)`** — Area from the major (`D`) and minor (`d`) diagonals.
+- **`rhombusl($l)`** — Perimeter from the side length.
 
-### Esfera
-- **`sphere($r, $va)`** — Volume (`"V"`) ou área (`"A"`) a partir do raio.
+### Sphere
+- **`sphere($r, $va)`** — Volume (`"V"`) or surface area (`"A"`) from the radius.
 
-### Quadrado
-- **`square($l, $ap)`** — Área (`"A"`) ou perímetro (`"P"`) a partir do lado.
+### Square
+- **`square($l, $ap)`** — Area (`"A"`) or perimeter (`"P"`) from the side length.
 
-### Trapézio
-- **`trapezoidb($B, $b, $h)`** — Área a partir das bases maior (`B`) e menor (`b`) e altura (`h`).
-- **`trapezoidl($B, $b, $l1, $l2)`** — Perímetro a partir das bases e dos lados oblíquos.
+### Trapezoid
+- **`trapezoidb($B, $b, $h)`** — Area from the major base (`B`), minor base (`b`), and height (`h`).
+- **`trapezoidl($B, $b, $l1, $l2)`** — Perimeter from the bases and the two slanted sides.
 
-Para as funções com parâmetro de modo (`ap`, `rp`, `vg`, `va`, `vas`), as opções aceitam letras maiúsculas ou minúsculas (ex: `"A"` ou `"a"`). Um valor não reconhecido retorna `null`.
+For functions with a mode parameter (`ap`, `rp`, `vg`, `va`, `vas`), options accept uppercase or lowercase letters (e.g., `"A"` or `"a"`). An unrecognized value returns `null`.
 
 ---
 
-## Equações
+## Equations
 
 ### `firstDegreeEquation($a, $b)`
-Resolve equação do 1º grau (`ax + b = 0`).
+Solves a first-degree equation (`ax + b = 0`).
 
-- **`$a`, `$b`** *(float)* — Coeficientes da equação.
-- **Retorno** *(float|null)* — Raiz da equação, ou `null` se `a = 0` (equação sem solução única).
+- **`$a`, `$b`** *(float)* — Equation coefficients.
+- **Returns** *(float|null)* — The equation's root, or `null` if `a = 0` (no unique solution).
 
 ### `secondDegreeEquation($a, $b, $c)`
-Resolve equação do 2º grau (`ax² + bx + c = 0`) usando Bhaskara.
+Solves a second-degree equation (`ax² + bx + c = 0`) using the quadratic formula.
 
-- **`$a`, `$b`, `$c`** *(float)* — Coeficientes da equação.
-- **Retorno**:
-  - Se `delta < 0`: retorna o valor do delta (negativo), indicando que não há raízes reais.
-  - Se `delta == 0`: retorna a raiz única.
-  - Se `delta > 0`: retorna um array associativo `["x1" => ..., "x2" => ...]` com as duas raízes.
+- **`$a`, `$b`, `$c`** *(float)* — Equation coefficients.
+- **Returns**:
+  - If `delta < 0`: returns the delta value (negative), indicating there are no real roots.
+  - If `delta == 0`: returns the single root.
+  - If `delta > 0`: returns an associative array `["x1" => ..., "x2" => ...]` with the two roots.
 
 ---
 
-## Uso
+## Usage
 
 ```php
 <?php
@@ -145,6 +145,6 @@ $roots = secondDegreeEquation(1, -5, 6);
 print_r($roots); // ["x1" => 3, "x2" => 2]
 ```
 
-## Requisitos
+## Requirements
 
-- PHP 7.4 ou superior (uso do operador `**` para potenciação).
+- PHP 7.4 or higher (uses the `**` exponentiation operator).
